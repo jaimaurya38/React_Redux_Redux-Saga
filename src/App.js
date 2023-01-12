@@ -3,7 +3,6 @@ import { Container } from 'semantic-ui-react';
 import './App.css';
 import DisplayBalance from './components/DisplayBalance';
 import DisplayBalances from './components/DisplayBalances';
-import EntryLine from './components/EntryLine';
 import EntryLines from './components/EntryLines';
 import MainHeader from './components/MainHeader';
 import NewEntryForm from './components/NewEntryForm';
@@ -17,6 +16,20 @@ function App() {
     setEntries(result);
     console.log("After", entries);
   }
+
+  function addEntry(discription, value, isExpense) {
+    let id = entries.length + 1;
+    const result = entries.concat({
+      id,
+      discription,
+      value,
+      isExpense
+    });
+    console.log('add result', result);
+    console.log('entries', entries);
+    setEntries(result);
+  }
+
   return (
     <Container>
       <MainHeader title={'Budget'} style={{ marginTop: 20 }} ></MainHeader>
@@ -31,7 +44,7 @@ function App() {
 
       <MainHeader title={'Add New Transaction'} type={'h3'}></MainHeader>
 
-      <NewEntryForm />
+      <NewEntryForm addEntry={addEntry} />
 
     </Container>
   );
