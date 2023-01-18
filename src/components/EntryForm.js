@@ -15,7 +15,7 @@ export default function EntryForm({
                 <Form.Input
                     icon='tags'
                     width={12}
-                    label="Description"
+                    label="description"
                     placeholder="New Entry"
                     value={description}
                     onChange={(event) => setDescription(event.target.value)}
