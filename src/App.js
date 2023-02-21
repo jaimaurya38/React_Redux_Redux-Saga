@@ -9,6 +9,7 @@ import Modaledit from './components/Modaledit';
 import NewEntryForm from './components/NewEntryForm';
 
 function App() {
+  console.log("Run App.js");
   let [entries, setEntries] = useState(initialEntries);
 
   const [description, setDescription] = useState('');
