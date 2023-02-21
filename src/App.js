@@ -49,6 +49,22 @@ function App() {
     setTotal(totalIncomes - totalExpenses);
   }, [entries]);
 
+  /* Store */
+  // const payload_add = {
+  //   id:5,
+  //   description: 'hello from Redux',
+  //   value: '9',
+  //   isExpense: true
+  // };
+
+  // const payload_remove = {
+  //   id:1
+  // };
+
+  // store.dispatch(addEntryRedux(payload_add));
+  // store.dispatch(removeEntryRedux(payload_remove));
+
+  /* console.log(store.getState()); */
 
   function deleteEntry(id) {
     let result = entries.filter((entry) => { return entry.id !== id });
@@ -135,30 +151,29 @@ function App() {
 }
 
 export default App;
-
 var initialEntries = [
   {
-    id: 1,
-    description: "Work income",
-    value: "1000.00",
-    isExpense: false
+      id: 1,
+      description: "Work income",
+      value: "1000.00",
+      isExpense: false
   },
   {
-    id: 2,
-    description: "Water bill",
-    value: "20.00",
-    isExpense: true
+      id: 2,
+      description: "Water bill",
+      value: "20.00",
+      isExpense: true
   },
   {
-    id: 3,
-    description: "Rent",
-    value: "300.00",
-    isExpense: true
+      id: 3,
+      description: "Rent",
+      value: "300.00",
+      isExpense: true
   },
   {
-    id: 4,
-    description: "Power bill",
-    value: "20.00",
-    isExpense: true
+      id: 4,
+      description: "Power bill",
+      value: "20.00",
+      isExpense: true
   }
-];
+]; 
