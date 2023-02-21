@@ -19,7 +19,7 @@ function App() {
   const [incomeTotal, setIncomeTotal] = useState(0);
   const [expenseTotal, setExpenseTotal] = useState(0);
   const [total, setTotal] = useState(0);
-
+  console.log("Run App.js");
   useEffect(() => {
     if (!isOpen && entryId) {
       const index = entries.findIndex(entry => entry.id === entryId);
